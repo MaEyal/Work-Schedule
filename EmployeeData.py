@@ -62,7 +62,7 @@ def add_employee(name, week_shifts):
     sheet.cell(row=i*5+2, column=2).value = "0"
     sheet.cell(row=i*5+3, column=2).value = "0"
     sheet.cell(row=i*5+4, column=2).value = "False"
-    employees.cell(row=(x + 1) * 5 + 3, column=4).value = "Saturdays before"
+    sheet.cell(row=i * 5 + 3, column=4).value = "Saturdays before"
     sheet.cell(row=2, column=1).value = sheet.cell(row=2, column=1).value +1
     Employees.save("Employees.xlsx")
     Employees.close()

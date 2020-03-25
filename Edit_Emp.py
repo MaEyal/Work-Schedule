@@ -25,7 +25,7 @@ def add_em():
 
     def add():
         try:
-            int(weekly_shifts_entry.get())
+            k = int(weekly_shifts_entry.get())
             if len(name_entry.get()) > 0:
                 EmployeeData.add_employee(name_entry.get(),weekly_shifts_entry.get())
                 update_combo()

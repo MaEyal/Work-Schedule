@@ -66,7 +66,7 @@ def generate(gen_win):
                             weekly_rest[shifts_sorted[x].shift_num]= new_emp_list[count].employee_number
                             new_emp_list[count].num_of_shifts -= 1
                             found = True
-                            if (shifts_sorted[x].shift_num > 27):
+                            if (shifts_sorted[x].shift_num%6 == 4 or shifts_sorted[x].shift_num%6 ==5):
                                 new_emp_list[count].last_week_nights += 1
                             new_emp_list[count].weekly_rest_num -= 1
                             while count<len(new_emp_list)-1 and new_emp_list[count].weekly_rest_num <= new_emp_list[count+1].weekly_rest_num:
@@ -86,7 +86,7 @@ def generate(gen_win):
                             weekly_rest[shifts_sorted[x].shift_num]= new_emp_list[count].employee_number
                             new_emp_list[count].num_of_shifts -= 1
                             found = True
-                            if (shifts_sorted[x].shift_num > 27):
+                            if (shifts_sorted[x].shift_num%6 == 4 or shifts_sorted[x].shift_num%6 ==5):
                                 new_emp_list[count].last_week_nights += 1
                         while count < len(new_emp_list) - 1 and new_emp_list[count].weekly_rest_num <= new_emp_list[
                             count + 1].weekly_rest_num:
